@@ -27,5 +27,18 @@ add_library(wavelib STATIC ${SOURCE_FILES} ${HEADER_FILES})
         
 set_property(TARGET wavelib PROPERTY FOLDER "lib")
 
+target_compile_options(wavelib
+	PRIVATE
+	-fPIC
+	-Ofast
+	-march=native
+	-fno-stack-protector
+	-fomit-frame-pointer
+	-freciprocal-math
+)
+
+
+
+
 target_include_directories(wavelib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}../header)
 

@@ -31,7 +31,7 @@ target_compile_options(wavelib
 	PRIVATE
 	-fPIC
 	-Ofast
-	-march=native
+	#-march=native
 	-fno-stack-protector
 	-fomit-frame-pointer
 	-freciprocal-math
